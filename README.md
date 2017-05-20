@@ -2,4 +2,4 @@
 T3 OOP1
 
 
-Davi Alves Bezerra & Israel Neves Micha
+Davi Alves Bezerra e Israel Neves Micha
