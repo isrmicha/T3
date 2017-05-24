@@ -1,5 +1,5 @@
 
-public class Mamão extends Produto{
+public class Mamao extends Produto{
 
 
 	public double getPreco() {

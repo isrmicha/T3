@@ -1,11 +1,11 @@
 public abstract class Produto{
 	
-	private int qtde;
+	private int qtdeProd=0;
 	
 	public abstract double getPreco();
 	
 	public void setQtde(int qtde){
-		this.qtde = qtde;
+		qtdeProd += qtde;
 	}
 	
 }
