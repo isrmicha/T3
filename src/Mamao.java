@@ -5,5 +5,7 @@ public class Mamao extends Produto{
 	public double getPreco() {
 		return Mamao.preco;
 	}
-	
+	public String getNome(){
+		return "Mamão";
+	}
 }

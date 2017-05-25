@@ -4,4 +4,7 @@ public class Limao extends Produto{
 	public double getPreco() {
 		return Limao.preco;
 	}
+	public String getNome(){
+		return "Limão";
+	}
 }

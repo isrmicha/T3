@@ -1,7 +1,7 @@
 import javax.swing.JOptionPane;
 
 public class Cesta {
-	private int qtProdutos = 0;
+	private static int qtProdutos = 0;
 	
 	Produto[] cesta = new Produto[7];
 	
@@ -16,9 +16,11 @@ public class Cesta {
 						cesta[0] = new Banana();
 						cesta[0].setQtde(qtd);					
 						qtProdutos+=qtd;
+						System.out.println("Item Adicionado");
 						break;						
 					}else{
 						cesta[0].setQtde(qtd);
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}
 				case "Limao":
@@ -100,6 +102,25 @@ public class Cesta {
 			}
 		}
 		return total;		
+	}
+	
+	public void listaCesta(){
+		for(int i = 0; i < cesta.length ; i++){
+			if(cesta[i] == null){
+				continue;
+			}else{
+				System.out.println("Produto: "+cesta[i].getNome()+"\nQuantidade: "+cesta[i].getQtde()+"\nPreço unitário R$"+cesta[i].getPreco()+"\n");				
+			}
+		}
+	}
+	
+	public void limparCesta(){
+		for(int i = 0 ; i < cesta.length ; i++){
+			cesta[i] = null;
+		}
+		Cesta.qtProdutos = 0;
+		System.out.print("Cesta vazia!");
+		
 	}
 
 }

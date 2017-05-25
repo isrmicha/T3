@@ -4,5 +4,9 @@ public class Pera extends Produto{
 	public double getPreco() {		
 		return Pera.preco;
 	}
+	
+	public String getNome(){
+		return "Pera";
+	}
 
 }

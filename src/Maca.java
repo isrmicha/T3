@@ -5,5 +5,8 @@ public class Maca extends Produto{
 	public double getPreco() {		
 		return Maca.preco;
 	}
+	public String getNome(){
+		return "Maça";
+	}
 
 }
