@@ -7,7 +7,7 @@ public class Cesta {
 	
 	public void adicionarItem(String tipo, int qtd){
 		if( (qtProdutos+qtd) > 12){
-			JOptionPane.showMessageDialog(null, "A cesta está cheia!");
+			JOptionPane.showMessageDialog(null, "Exede o tamanho da cesta");
 			return;
 		}else{
 			switch (tipo){
@@ -16,7 +16,7 @@ public class Cesta {
 						cesta[0] = new Banana();
 						cesta[0].setQtde(qtd);					
 						qtProdutos+=qtd;
-						System.out.println("Item Adicionado");
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;						
 					}else{
 						cesta[0].setQtde(qtd);
@@ -28,9 +28,11 @@ public class Cesta {
 						cesta[1] = new Limao();
 						cesta[1].setQtde(qtd);
 						qtProdutos+=qtd;
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}else{
 						cesta[1].setQtde(qtd);
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}
 				case "Maca":
@@ -38,9 +40,11 @@ public class Cesta {
 						cesta[2] = new Maca();
 						cesta[2].setQtde(qtd);
 						qtProdutos+=qtd;
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;						
 					}else{
 						cesta[2].setQtde(qtd);
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}
 				case "Mamao":
@@ -48,9 +52,11 @@ public class Cesta {
 						cesta[3] = new Mamao(); 
 						cesta[3].setQtde(qtd);
 						qtProdutos+=qtd;
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}else{
 						cesta[3].setQtde(qtd);
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}
 				case "Morango":
@@ -58,9 +64,11 @@ public class Cesta {
 						cesta[4] = new Morango();
 						cesta[4].setQtde(qtd);
 						qtProdutos+=qtd;
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}else{
 						cesta[4].setQtde(qtd);
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}
 				case "Pera":
@@ -68,9 +76,11 @@ public class Cesta {
 						cesta[5] = new Pera();
 						cesta[5].setQtde(qtd);
 						qtProdutos+=qtd;
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}else{
 						cesta[5].setQtde(qtd);
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}
 				case "Uva":
@@ -78,13 +88,15 @@ public class Cesta {
 						cesta[6] = new Uva();
 						cesta[6].setQtde(qtd);
 						qtProdutos+=qtd;
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}else{
 						cesta[6].setQtde(qtd);
+						JOptionPane.showMessageDialog(null, "Item adicionado");
 						break;
 					}
 				default:
-					System.out.print("Produto inválido");
+					JOptionPane.showMessageDialog(null, "Poduto inválido!");
 					break;
 			}
 		}
@@ -109,9 +121,11 @@ public class Cesta {
 			if(cesta[i] == null){
 				continue;
 			}else{
-				System.out.println("Produto: "+cesta[i].getNome()+"\nQuantidade: "+cesta[i].getQtde()+"\nPreço unitário R$"+cesta[i].getPreco()+"\n");				
+				JOptionPane.showMessageDialog(null, "\nProduto: "+cesta[i].getNome()+"\nQuantidade: "+cesta[i].getQtde()+"\nPreço unitário R$"+cesta[i].getPreco()+"\n");
 			}
 		}
+		
+		JOptionPane.showMessageDialog(null, "Valor Total da Cesta R$"+this.calcularTotal());
 	}
 	
 	public void limparCesta(){

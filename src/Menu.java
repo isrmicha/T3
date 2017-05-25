@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 public class Menu {
@@ -8,36 +6,28 @@ public class Menu {
 	public void showMenu(){
 		
 		Cesta c = new Cesta();
+		boolean ficar = true;
 		
-		while(true){		
-			
-			Scanner input = new Scanner(System.in);
-			
-			System.out.print("\nOque deseja fazer?\n\n(Adicionar) Produto\n(Listar) Cesta\n(Limpar) cesta\n");
-			String opcao = input.nextLine();
+		while(ficar){		
+			String opcao = JOptionPane.showInputDialog(null,"Oque deseja fazer?\n\n(Adicionar) Produto\n(Listar) Cesta\n(Limpar) cesta\n(Sair)\n\n");
 			
 			switch(opcao){
 				case "Adicionar":
-					
-					System.out.print("\nTipo do produto?\nBanana, Limao, Maca, Mamao, Morango, Pera, Uva?\n");
-					String produto = input.nextLine();
-					
-					System.out.print("\nQuantidade?\n");
-					int qt = input.nextInt();					
-					
+					String produto = JOptionPane.showInputDialog(null,"\nTipo do produto?\nBanana, Limao, Maca, Mamao, Morango, Pera, Uva?\n");
+					int qt = Integer.parseInt(JOptionPane.showInputDialog(null, "\nQuantidade?\n"));
 					c.adicionarItem(produto, qt);
-					
 					break;	
-					
 				case "Listar":
 					c.listaCesta();		
-					
 					break;
 				case "Limpar":
-					
 					c.limparCesta();
-					
 					break;
+				case "Sair":
+					ficar = false;
+					break;
+				default:
+					JOptionPane.showMessageDialog(null, "Opção inválida");
 			}
 		
 		}
