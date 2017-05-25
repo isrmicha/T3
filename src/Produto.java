@@ -7,5 +7,8 @@ public abstract class Produto{
 	public void setQtde(int qtde){
 		qtdeProd += qtde;
 	}
+	public int getQtde(){
+		return this.qtdeProd;
+	}
 	
 }

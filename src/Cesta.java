@@ -81,6 +81,9 @@ public class Cesta {
 						cesta[6].setQtde(qtd);
 						break;
 					}
+				default:
+					System.out.print("Produto inválido");
+					break;
 			}
 		}
 	}
@@ -93,7 +96,7 @@ public class Cesta {
 			if(cesta[i] == null){
 				continue;
 			}else{
-				total+= cesta[i].getPreco();
+				total += cesta[i].getPreco()*cesta[i].getQtde();
 			}
 		}
 		return total;		
