@@ -1,10 +1,12 @@
 
 public class Morango extends Produto{
 
-	
-	public double getPreco() {
-		
-		return 0;
+	private static final double preco = 0.50;
+	public double getPreco() {		
+		return Morango.preco;
 	}
-
+	
+	public String getNome(){
+		return "Morango";
+	}
 }

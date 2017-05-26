@@ -1,10 +1,12 @@
 
 public class Maca extends Produto{
 
-	
-	public double getPreco() {
-		
-		return 0;
+	private static final double preco = 3.50;
+	public double getPreco() {		
+		return Maca.preco;
+	}
+	public String getNome(){
+		return "Maça";
 	}
 
 }
