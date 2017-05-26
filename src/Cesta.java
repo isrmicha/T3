@@ -1,7 +1,7 @@
 import javax.swing.JOptionPane;
 
 public class Cesta {
-	private static int qtProdutos = 0;
+	private int qtProdutos = 0;
 	
 	Produto[] cesta = new Produto[7];
 	
@@ -133,7 +133,7 @@ public class Cesta {
 			cesta[i] = null;
 		}
 		Cesta.qtProdutos = 0;
-		System.out.print("Cesta vazia!");
+		System.out.print("Cesta vazia! ");
 		
 	}
 
